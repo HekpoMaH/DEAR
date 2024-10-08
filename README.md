@@ -20,10 +20,10 @@ To install an environment (`dear`) with packages needed, do the following:
 
 1. Download [CLRS-30](https://github.com/google-deepmind/clrs) repository to your home directory (using `git clone`). E.g. for me (Dobrik) this is `/home/dobrik/clrs`. You will need to change the path in `gpuenv.yml` to point to your path to CLRS-30
 1. Install the conda environment and activate it
-```
-conda env create -f gpuenv.yml
-conda activate dear
-```
+   ```
+   conda env create -f gpuenv.yml
+   conda activate dear
+   ```
 1. Downgrade `protobuf`:
 ```
 pip install protobuf==3.20
