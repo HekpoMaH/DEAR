@@ -25,9 +25,9 @@ To install an environment (`dear`) with packages needed, do the following:
    conda activate dear
    ```
 1. Downgrade `protobuf`:
-```
-pip install protobuf==3.20
-```
+   ```
+   pip install protobuf==3.20
+   ```
 
 ## Preparation
 
