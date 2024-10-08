@@ -1,0 +1,20 @@
+method: "bayes"
+name: "sample"
+entity: "dgg30"
+project: "nardeq"
+metric:
+    goal: "minimize"
+    name: "val/loss/min_loss_so_far"
+parameters:
+    jac_reg:
+        values: [True, False]
+    jac_reg_tau:
+        values: [0.00001, 0.0001, 0.001, 0.01]
+    weight_decay:
+        values: [0, 0.00001, 0.0001]
+    deq:
+        parameters:
+            deq_max_iter: 
+                values: [40, 60, 80]
+    seed:
+        values: [1, 2, 3]

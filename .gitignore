@@ -1,0 +1,6 @@
+*__pycache__*
+serialised_models
+data
+.DS_store
+wandb
+*.png

@@ -1,0 +1,30 @@
+algo_cls: 'deq'
+inv_ptr: False
+jac_reg: False
+use_GRANOLA: False
+GRANOLA_NRNF: 128
+jac_reg_tau: 0.0001
+contrastive_reg: False
+use_expander: True
+use_expander_sepproc: True
+hint_mode: 'none'
+supervise_hints: False
+max_epochs: 100
+weight_decay: 0.00000
+learn_termination: False
+termination_overshoot_factor: 1.5
+global_pool: 'max'
+# decay_hidden: 0.9
+deq:
+  solver: 'anderson'
+  deq_max_iter: 40
+  eval_factor: 4
+  f_tol: 0.01
+  stochastic: True
+  stochastic_alpha: 0.1
+  b_tol: 0.001
+  stop_mode: 'rel'
+  align: False
+  alignment_factor: 0.01
+  monotonise: False
+  monoto_factor: 0.010
