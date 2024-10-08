@@ -25,7 +25,7 @@ name_mapper = {
     "minimum": "Minimum",
 }
 
-spr = ["snowy-snowball-1328", "lyric-bee-1324", "splendid-dream-1320"]
+EXAMPLE_LIST = ["snowy-snowball-1328", "lyric-bee-1324", "splendid-dream-1320"]
 # run_names_baselines = ["decent-bee-661", "glowing-valley-660", "super-terrain-659", "still-sky-644", "wise-pine-643", "misunderstood-morning-644", "earnest-haze-632", "rosy-pond-631", "scarlet-vortex-630", "comic-shadow-620", "firm-river-616", "wandering-armadillo-615", "chocolate-wind-596", "comfy-snowball-587", "decent-firefly-580", "earthy-microwave-579", "devout-rain-578", "trim-dragon-577", "divine-salad-574", "fearless-feather-571", "floral-glitter-570", "expert-water-569", "pious-deluge-566", "misty-glitter-565", "faithful-sky-534", "lilac-lion-529", "firm-pond-528", "unique-dream-522", "prime-river-521", "fluent-wind-516"] # baselines
 run_names_deqs = [
     "woven-fire-666",
@@ -62,7 +62,7 @@ run_names_deqs = [
 
 
 def get_df_for_run_names(run_names, whattoget="train/loss/average_loss/epoch"):
-    runs = wandb.Api().runs("clrs-cambridge/nardeq")
+    runs = wandb.Api().runs("clrs-cambridge/nardeq") # NOTE CHANGE HERE
     runs = list(filter(lambda x: x.name in run_names, runs))
     hist_list_epoch = []
     for run in runs:
@@ -77,7 +77,7 @@ def get_df_for_run_names(run_names, whattoget="train/loss/average_loss/epoch"):
     return df
 
 
-runs = wandb.Api().runs("clrs-cambridge/nardeq")
+runs = wandb.Api().runs("clrs-cambridge/nardeq") # NOTE CHANGE HERE
 names = [x.name for x in runs]
 
 
@@ -121,7 +121,7 @@ if __name__ == "__main__":
     testing_metrics_dict = defaultdict(list)
 
     # Iterate over each run name
-    for run_name in spr:
+    for run_name in EXAMPLE_LIST:
         model_path, name = download_model_for_run(run_name)
         # if name in ['floyd_warshall', 'strongly_connected_components_local']:
         #     continue
@@ -132,7 +132,7 @@ if __name__ == "__main__":
 
     from pprint import pprint
 
-    for run_name in spr:
+    for run_name in EXAMPLE_LIST:
         model_path, name = download_model_for_run(run_name)
         # if name in ['floyd_warshall', 'strongly_connected_components_local']:
         #     continue

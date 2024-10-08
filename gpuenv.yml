@@ -1,4 +1,4 @@
-name: nardeq_test
+name: dear 
 channels:
     - pytorch
     - nvidia
@@ -32,7 +32,7 @@ dependencies:
         - -f https://data.pyg.org/whl/torch-2.2.0+cu121.html
         - "jax[cpu]==0.4.30"
         - -f https://storage.googleapis.com/jax-releases/jax_cuda_releases.html
-        - /home/dobrik/clrs/
+        - /home/dobrik/clrs/ # NOTE Change here
         - matplotlib
         - seaborn
         - git+https://github.com/HekpoMaH/torchdeq@alignment

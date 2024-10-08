@@ -110,7 +110,7 @@ def train(config, args=None):
     )
     wandb.init(
         project="nardeq",
-        entity="clrs-cambridge",
+        entity="clrs-cambridge", # NOTE CHANGE HERE
         group=None,
         settings=wandb.Settings(code_dir="."),
         save_code=True,
@@ -157,7 +157,7 @@ def train(config, args=None):
         gradient_clip_val=args["--gradient-clip-val"],
         logger=pl.loggers.WandbLogger(
             project="nardeq",
-            entity="clrs-cambridge",
+            entity="clrs-cambridge", # NOTE CHANGE HERE
             log_model=True,
             group=None,
             settings=wandb.Settings(code_dir="."),
@@ -210,6 +210,6 @@ if __name__ == "__main__":
         wandb.agent(
             args["--agentify"],
             function=lambda: train(None, args=args),
-            entity="clrs-cambridge",
+            entity="clrs-cambridge", # NOTE CHANGE HERE
             project="nardeq",
         )
