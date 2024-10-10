@@ -30,7 +30,7 @@ dependencies:
         - -f https://data.pyg.org/whl/torch-2.2.0+cu121.html
         - torch_spline_conv
         - -f https://data.pyg.org/whl/torch-2.2.0+cu121.html
-        - "jax[cpu]==0.4.30"
+        - "jax[cpu]==0.4.31"
         - -f https://storage.googleapis.com/jax-releases/jax_cuda_releases.html
         - /home/dobrik/clrs/ # NOTE Change here
         - matplotlib

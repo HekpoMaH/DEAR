@@ -8,7 +8,7 @@ Official code repository for the paper [Deep Equilibrium Algorithmic Reasoning](
 - `prepare_datasets.py`: Script to generate and preprocess the data used for training and testing.
 - `train_reasoner.py`: Main script for training neural algorithmic reasoners.
 - `test_*.py`: Scripts for testing models. (`*` denotes a wildmark, there is no file `test_*.py`)
-- `*.yaml`: Configuration files for our experiments. (We have intentionally used `.yml` for the `conda` environment.
+- `configs/*.yaml`: Configuration files for our experiments. (We have intentionally used `.yml` for the `conda` environment).
 
 Any models that you train will be saved in the directory in the format `best_`+given name. If you do not explicitly provide a name (using `--model-name`), the date+time at the time of the **starting** of the training script is used.
 
@@ -49,7 +49,7 @@ wandb disabled
 
 For training, our models utilise config files. E.g. if you want to train a model to execute BFS, that also uses deep equilibrium reasoning, run:
 ```bash
-python train_reasoner.py --algorithms bfs --config-path deq.yaml
+python train_reasoner.py --algorithms bfs --config-path configs/deq.yaml
 ```
 The `algo_cls` flag controls the class of NAR model -- `'deq'` for DEAR and `'normal'` for standard.
 
