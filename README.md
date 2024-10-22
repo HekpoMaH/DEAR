@@ -4,7 +4,7 @@ Official code repository for the paper [Deep Equilibrium Algorithmic Reasoning](
 ## Key files/locations
 
 - `datasets/`: Code responsible for handling the datasets
-- `layers/`+`models/`: Our model's implementations are in those two locations. We have aimed to keep to the following "rule": If a class is NOT a [pytorch lightning](https://lightning.ai/docs/pytorch/stable/) class, it is responsible for processing a datapoint, but NOT for loss computation, dataloaders, etc. If it is a [pytorch lightning](https://lightning.ai/docs/pytorch/stable/) class, then the code related to loss computation/dataloaders/logging/etc. is likely to be there, but not the code for processing (neurally executing) an input.
+- `layers/`+`models/`: Our model's implementations are in those two locations. We have aimed to keep to the following "rule": If a class is NOT a [pytorch lightning](https://lightning.ai/docs/pytorch/stable/) class, it resides in `layers/` and is responsible for processing a datapoint, but NOT for loss computation, dataloaders, etc. If it is a [pytorch lightning](https://lightning.ai/docs/pytorch/stable/) class, then the code resides in `models/` and anything related to loss computation/dataloaders/logging/etc. is likely to be there, but not the code for processing (neurally executing) an input.
 - `prepare_datasets.py`: Script to generate and preprocess the data used for training and testing.
 - `train_reasoner.py`: Main script for training neural algorithmic reasoners.
 - `test_*.py`: Scripts for testing models. (`*` denotes a wildmark, there is no file `test_*.py`)
